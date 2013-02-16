@@ -1,11 +1,12 @@
 define [
     'js/collection.todos'
     'js/view.todolist'
+    'js/bg.temple'
     'zepto'
     'underscore'
     'backbone'
     ],
-    (Todos, TodoView, $, _, Backbone) ->
+    (Todos, TodoView, Temple, $, _, Backbone) ->
 
         #
         # app view
@@ -34,6 +35,8 @@ define [
                 @listenTo(Todos, 'all', @render)
 
                 @main = $('#Main')
+
+                #@Temple = new 
                 #@footer = @.$('footer')
 
                 Todos.fetch();
