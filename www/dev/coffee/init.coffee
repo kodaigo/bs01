@@ -23,11 +23,10 @@ require.config {
 ####################
 
 require [
-	'js/view.app',
-	'zepto',
-	'js/lib.honegumi'
+	'js/view.app'
+	'zepto'
 	],
-	 (AppView,$,Honegumi) ->
+	 (AppView,$) ->
 
 	 	window.app = window.app || {}
 
@@ -36,11 +35,6 @@ require [
 	 	#完了タスク数保存
 
 	 	$(->
-	 		#レイアウト初期化
-	 		app.layout = new Honegumi(
-	 			header : false
-	 		)
-	 		app.layout.start()
 	 		#アプリ起動
 	 		app.view = new AppView()
 	 		return

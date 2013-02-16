@@ -25,10 +25,11 @@
         this.device_w = $(window).width();
         this.header_h = this.conf.header ? $("#" + this.conf.headerID).height() : 0;
         this.footer_h = this.conf.footer ? $("#" + this.conf.footerID).height() : 0;
+        this.contents_h = this.device_h - this.header_h - this.footer_h;
+        this.contents_w = this.device_w;
       }
 
       HONEGUMI.prototype.start = function() {
-        this.contents_h = this.device_h - this.header_h - this.footer_h;
         $("#" + this.conf.contentsID).height(this.contents_h);
         this.iScroll = new lib.iScroll(this.conf.contentsID);
       };

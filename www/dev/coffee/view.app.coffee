@@ -1,12 +1,13 @@
 define [
     'js/collection.todos'
     'js/view.todolist'
-    'js/bg.temple'
+    'js/lib.honegumi'
+    'js/bg.tower'
     'zepto'
     'underscore'
     'backbone'
     ],
-    (Todos, TodoView, Temple, $, _, Backbone) ->
+    (Todos, TodoView, Honegumi, Temple, $, _, Backbone) ->
 
         #
         # app view
@@ -38,7 +39,13 @@ define [
                 @main = $('#Main')
                 @dialogFlg = 0;
 
-                #@Temple = new 
+                #レイアウト初期化
+                app.layout = new Honegumi(
+                    header : false
+                )
+                app.layout.start()
+
+                @Temple = new Temple("backImage", app.layout.contents_w, app.layout.contents_h)
                 #@footer = @.$('footer')
 
                 Todos.fetch();

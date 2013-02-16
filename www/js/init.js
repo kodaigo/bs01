@@ -26,13 +26,9 @@
     urlArgs: "bust=" + (new Date()).getTime()
   });
 
-  require(['js/view.app', 'zepto', 'js/lib.honegumi'], function(AppView, $, Honegumi) {
+  require(['js/view.app', 'zepto'], function(AppView, $) {
     window.app = window.app || {};
     $(function() {
-      app.layout = new Honegumi({
-        header: false
-      });
-      app.layout.start();
       app.view = new AppView();
     });
   });

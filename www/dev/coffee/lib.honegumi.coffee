@@ -28,6 +28,10 @@ define [
                 
                 @header_h = if @conf.header then $("#"+@conf.headerID).height() else 0
                 @footer_h = if @conf.footer then $("#"+@conf.footerID).height() else 0
+
+                #コンテンツ
+                @contents_h = @device_h - @header_h - @footer_h
+                @contents_w = @device_w
             #
             #
             #
@@ -37,9 +41,6 @@ define [
             #
             start : ()->
                 #$("#"+@conf.headerID).
-
-                #コンテンツ
-                @contents_h = @device_h - @header_h - @footer_h
 
                 $("#"+@conf.contentsID).height(@contents_h)
                 @iScroll = new lib.iScroll @conf.contentsID
