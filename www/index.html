@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>まゆまろサンプル</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+    <!-- Place favicon.ico in the root directory -->
+<!--     <link rel="stylesheet" href="css/jq_mobile/jquery.mobile.custom.min.css">
+    <link rel="stylesheet" href="css/jq_mobile/jquery.mobile.custom.structure.min.css"> -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- <link rel="stylesheet" href="css/jq_mobile/jquery.mobile.structure-1.2.0.css"> -->
+    <!-- <link rel="stylesheet" href="css/jq_mobile/jquery.mobile-1.2.0.min.css"> -->
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body>
+    <div id="app" class="ui-base appPage">
+
+        <div class="taskInfo ui-header"> 
+          <p class="date">13.12.12</p>
+          <p class="todo">today's task : <span id="TodoNumber"></span></p>
+          <p class="done">all complete : <span id="completeTask"></span></p>
+        </div>
+      
+        <div id="uiContents" class="ui-contents">
+
+          <!-- ///////////////// -->
+
+          <div class="area todoList" id="TodoList">
+          <script type="text/template" id="tmpl-task">
+            <div class="title">
+              <p><a href="#"><%- title %></a></p>
+            </div>
+            <div class="detail">
+              <div class="panel">
+              <p class="btn complete"><a href="#">完了</a></p>
+              </div>
+              <div class="panel">
+              <p class="btn edit"><a href="#">編集</a></p>
+              </div>
+              <div class="panel">
+              <p class="btn close"><a href="#">閉じる</a></p>
+              </div>
+            </div>
+          </script>
+          </div>
+
+        </div>
+
+        <!-- ///////////////// -->
+
+        <canvas id="backImage" class="ui-background"></canvas>
+
+        <!-- ///////////////// -->
+
+        <div id="uiFooter" class="ui-footer toolBar">
+          <div class="inner">
+          <p class="btn"><a href="#dialog" id="openDialog">Open dialog</a></p>
+          </div>
+        </div> 
+
+        <!-- ///////////////// -->
+
+        <div id="dialog" class="ui-dialog taskSetting">
+          <div class="inner">
+            <label>
+              <span>タスク名</span>
+              <input type="text" name="name" id="AddTask" value="" />
+            </label>
+            <label>
+              <span>重要度</span>
+              <select id="importantLevel" name="important">
+                <option value="0">低い</option>
+                <option value="1" selected>普通</option>
+                <option value="2">高い</option>
+              </select>
+            </label>
+            <p class="btn"><a href="#home" id="btnAddTask" data-rel="back">タスク追加</a></p>
+            <p class="btn close"><a href="#home" data-rel="back">閉じる</a></p>
+          </div>
+        </div>
+
+        <!-- ///////////////// -->
+
+    </div>
+    <!-- Using require.js, a module system for javascript, include the
+         js files. This loads "main.js", which in turn can load other
+         files, all handled by require.js:
+         http://requirejs.org/docs/api.html#jsfiles -->
+    <script type="text/javascript"
+            data-main="js/init.js"
+            src="js/lib/require.js"></script>
+  </body>
+</html>

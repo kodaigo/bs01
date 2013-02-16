@@ -1,0 +1,287 @@
+
+/* Tip: Use "@import" to add styles instead of adding <link>'s in your
+   HTML, and volo will inline it when building for production */
+
+
+/* 
+my css framework 
+iscroll
+javascript
+*/
+html,
+body {
+	height: 100%;
+	min-height: 100%;
+	overflow: hidden;
+}
+
+.btn a {
+	display: block;
+	line-height: 1;
+	padding: 12px 16px;
+	border-radius: 5px;
+	text-align: center;
+	text-decoration: none;
+
+}
+
+.ui-base {
+	position: relative;
+}
+
+.ui-header {
+	position: absolute;
+	top : 0;
+	z-index: 3;
+}
+
+.ui-contents {
+	position: relative;
+	z-index: 2;
+}
+
+.ui-dialog {
+	/*display: none;*/
+	position: absolute;
+	z-index: 20;
+/*
+	top : 50%;
+	left: 50%;
+	width: 280px;
+	height: 300px;
+	margin: -150px 0 0 -140px;
+*/
+}
+
+.ui-footer {
+	position: relative;
+	height: 60px;
+	background: #666;
+}
+.ui-footer .inner {
+	padding: 6px 0;
+}
+.ui-footer .btn {
+	padding: 2px;
+	margin:0 auto;
+	width: 60%;
+}
+.ui-footer .btn a {
+	padding: 0 12px;
+	height: 40px;
+	line-height: 40px;
+	color: #FFF;
+	border: #333 1px solid;
+	vertical-align: middle;
+	background: rgb(145,156,158);
+	background: -moz-linear-gradient(-45deg, rgba(145,156,158,1) 0%, rgba(80,86,84,1) 50%, rgba(10,14,10,1) 51%, rgba(10,8,9,1) 100%);
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(145,156,158,1)), color-stop(50%,rgba(80,86,84,1)), color-stop(51%,rgba(10,14,10,1)), color-stop(100%,rgba(10,8,9,1)));
+	background: -webkit-linear-gradient(-45deg, rgba(145,156,158,1) 0%,rgba(80,86,84,1) 50%,rgba(10,14,10,1) 51%,rgba(10,8,9,1) 100%);
+	background: -o-linear-gradient(-45deg, rgba(145,156,158,1) 0%,rgba(80,86,84,1) 50%,rgba(10,14,10,1) 51%,rgba(10,8,9,1) 100%);
+	background: -ms-linear-gradient(-45deg, rgba(145,156,158,1) 0%,rgba(80,86,84,1) 50%,rgba(10,14,10,1) 51%,rgba(10,8,9,1) 100%);
+	background: linear-gradient(135deg, rgba(145,156,158,1) 0%,rgba(80,86,84,1) 50%,rgba(10,14,10,1) 51%,rgba(10,8,9,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#919c9e', endColorstr='#0a0809',GradientType=1 );
+	webkit-box-shadow:  0px 0px 3px 3px rgba(0, 0, 0, 0.4);
+	box-shadow:  0px 0px 3px 3px rgba(0, 0, 0, 0.4);
+	text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+	/*
+	background: rgb(182,224,38);
+	background: -moz-linear-gradient(top, rgba(182,224,38,1) 0%, rgba(171,220,40,1) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(182,224,38,1)), color-stop(100%,rgba(171,220,40,1)));
+	background: -webkit-linear-gradient(top, rgba(182,224,38,1) 0%,rgba(171,220,40,1) 100%);
+	background: -o-linear-gradient(top, rgba(182,224,38,1) 0%,rgba(171,220,40,1) 100%);
+	background: -ms-linear-gradient(top, rgba(182,224,38,1) 0%,rgba(171,220,40,1) 100%);
+	background: linear-gradient(to bottom, rgba(182,224,38,1) 0%,rgba(171,220,40,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b6e026', endColorstr='#abdc28',GradientType=0 );
+	*/
+}
+
+.ui-background {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
+
+
+/* Your styles here */
+
+body {
+	background-attachment: fixed;
+	background-repeat: repeat;
+	background-image: url(../img/bg_body.jpg);
+	background-position: 0 0;
+}
+
+.ui-content {
+/*
+	position: relative;
+	overflow:visible;
+*/
+	padding-right: 0;
+	padding-left: 140px;
+}
+
+.appPage {
+	/*background-size: 50%;*/
+	padding-top: 0 !important;
+	background-position: -96px -56px;
+	background-image: url(../img/bg_tit.png);
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+}
+
+
+.taskInfo {
+	top: 16px;
+	left: 16px;
+	width: 120px;
+	text-align: left;
+}
+.taskInfo p {
+	padding: 0;
+	margin: 8px 0 0;
+	color: #FFF;
+	line-height: 1;
+	font-family: "Georgia";
+	text-shadow: 0px 0px 10px #000000;
+}
+.taskInfo p span {
+	display: block;
+}
+.taskInfo p.date {
+	margin: 0;
+	padding: 0 0 8px; 
+	font-size: 24px;
+	/*border-bottom: solid 2px #FFF;*/
+}
+.taskInfo p.todo {
+	font-size: 18px;
+}
+.taskInfo p.todo span { font-size: 36px; }
+.taskInfo p.done { font-size: 16px; }
+
+.area.todoList {
+	padding: 18px 0 12px 140px; 
+}
+.todoList .task {
+	position: relative;
+	overflow: hidden;
+	/*height: 200px;*/
+	margin: 0 0 12px 100%;
+	-webkit-box-shadow:  0px 0px 2px 2px rgba(0, 0, 0, 0.15);
+	box-shadow:  0px 0px 2px 2px rgba(0, 0, 0, 0.15);
+	border-top-left-radius: 2px;
+	border-bottom-left-radius: 2px;
+	/*background: rgba(0,0,0,0.8);*/
+	background: -moz-linear-gradient(top, rgba(51,51,51,0.9) 0%, rgba(34,34,34,0.9) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(51,51,51,0.9)), color-stop(100%,rgba(34,34,34,0.95)));
+	background: -webkit-linear-gradient(top, rgba(51,51,51,0.9) 0%,rgba(34,34,34,0.9) 100%);
+	background: -o-linear-gradient(top, rgba(51,51,51,0.9) 0%,rgba(34,34,34,0.9) 100%);
+	background: -ms-linear-gradient(top, rgba(51,51,51,0.9) 0%,rgba(34,34,34,0.9) 100%);
+	background: linear-gradient(to bottom, rgba(51,51,51,0.9) 0%,rgba(34,34,34,0.9) 100%);
+
+/*	-webkit-transition-property: height, margin-left, margin-top;  
+	-webkit-transition-duration: 300ms, 300ms, 300ms;
+	-webkit-transition-timing-function: linear, linear, linear;
+*/
+}
+
+
+.todoList .task > div {
+}
+.todoList .task .title {
+	position: relative;
+}
+.todoList .task p {
+	margin: 0;
+}
+.todoList .task .title p a {
+	display: block;
+	padding: 16px 0 16px 16px;
+	color: #FFF;
+	font-size: 16px;
+	line-height: 1.5;
+	letter-spacing: 0.15em;
+	text-decoration: none;
+}
+.todoList .task .detail {
+	display: none;
+	background: rgba(255,255,255,0.2);
+}
+.todoList .task .detail .panel {
+	display: table-cell;
+}
+.todoList .task .detail .panel .btn a {
+	display: block;
+	line-height: 1;
+	padding: 12px;
+	color: #fff;
+}
+
+.toolBar {
+	height: 56px;
+	background: #333;
+	-webkit-box-shadow: inset 0px 3px 5px 0px rgba(0, 0, 0, 0.6);
+	box-shadow: inset 0px 3px 5px 0px rgba(0, 0, 0, 0.6);
+}
+
+.taskSetting {
+	/*display: none;*/
+	width: 80%;
+	left: 50%;
+	bottom: 70px;
+	margin-left: -40%;
+	border-radius: 5px;
+	border: 1px solid #333;
+	background: -moz-linear-gradient(top, rgba(51,51,51,1) 0%, rgba(34,34,34,1) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(51,51,51,1)), color-stop(100%,rgba(34,34,34,1)));
+	background: -webkit-linear-gradient(top, rgba(51,51,51,1) 0%,rgba(34,34,34,1) 100%);
+	background: -o-linear-gradient(top, rgba(51,51,51,1) 0%,rgba(34,34,34,1) 100%);
+	background: -ms-linear-gradient(top, rgba(51,51,51,1) 0%,rgba(34,34,34,1) 100%);
+	background: linear-gradient(to bottom, rgba(51,51,51,1) 0%,rgba(34,34,34,1) 100%);
+}
+.taskSetting .inner {
+	padding: 12px;
+}
+.taskSetting .inner label {
+	display: block;
+	padding: 12px 0;
+	line-height: 1;
+	vertical-align: middle;
+	text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+.taskSetting .inner label span {
+	color: #FFF;
+	font-size: 12px;5
+	text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+.taskSetting .inner label input,
+.taskSetting .inner label select {
+	display: block;
+}
+.taskSetting .btn a {
+	color: #FFF;
+	text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+	background: rgb(255,168,76);
+	background: -moz-linear-gradient(top, rgba(255,168,76,1) 0%, rgba(255,123,13,1) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,168,76,1)), color-stop(100%,rgba(255,123,13,1)));
+	background: -webkit-linear-gradient(top, rgba(255,168,76,1) 0%,rgba(255,123,13,1) 100%);
+	background: -o-linear-gradient(top, rgba(255,168,76,1) 0%,rgba(255,123,13,1) 100%);
+	background: -ms-linear-gradient(top, rgba(255,168,76,1) 0%,rgba(255,123,13,1) 100%);
+	background: linear-gradient(to bottom, rgba(255,168,76,1) 0%,rgba(255,123,13,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffa84c', endColorstr='#ff7b0d',GradientType=0 );
+}
+
+.green {
+	background: rgb(164,179,87);
+	background: -moz-linear-gradient(top, rgba(164,179,87,1) 0%, rgba(117,137,12,1) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(164,179,87,1)), color-stop(100%,rgba(117,137,12,1)));
+	background: -webkit-linear-gradient(top, rgba(164,179,87,1) 0%,rgba(117,137,12,1) 100%);
+	background: -o-linear-gradient(top, rgba(164,179,87,1) 0%,rgba(117,137,12,1) 100%);
+	background: -ms-linear-gradient(top, rgba(164,179,87,1) 0%,rgba(117,137,12,1) 100%);
+	background: linear-gradient(to bottom, rgba(164,179,87,1) 0%,rgba(117,137,12,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a4b357', endColorstr='#75890c',GradientType=0 );
+}
+
