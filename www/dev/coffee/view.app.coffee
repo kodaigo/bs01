@@ -22,6 +22,7 @@ define [
                 #"click #clear-completed": "clearCompleted"
                 #"click #toggle-all": "toggleAllComplete"
                 "click #btnAddTask" : "addTask"
+                "click #openDialog": "toggleDialog"
 
             #
             initialize : ->
@@ -35,6 +36,7 @@ define [
                 @listenTo(Todos, 'all', @render)
 
                 @main = $('#Main')
+                @dialogFlg = 0;
 
                 #@Temple = new 
                 #@footer = @.$('footer')
@@ -111,6 +113,30 @@ define [
             #         (todo)->
             #             todo.save({'done': done})
             #     )
+
+            toggleDialog : () ->
+                console.log(@dialogFlg)
+                if @dialogFlg == 0
+                    @dialogFlg = 1
+                    $("#dialog").css('display','block')
+                    $("#dialog").animate({
+                        opacity:1
+                        },
+                        500,
+                        "swing"
+                    )
+                else
+                    @dialogFlg = 0
+                    $("#dialog").animate({
+                        opacity:0
+                        },
+                        500,
+                        "swing",
+                        ->
+                            $("#dialog").css('display','none')
+                            return
+                    )
+                return
 
         }
 

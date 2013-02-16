@@ -41,7 +41,8 @@ body {
 }
 
 .ui-dialog {
-	/*display: none;*/
+	display: none;
+	opacity: 0;
 	position: absolute;
 	z-index: 20;
 /*
