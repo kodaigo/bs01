@@ -275,6 +275,16 @@ body {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffa84c', endColorstr='#ff7b0d',GradientType=0 );
 }
 
+#btnClose{
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	top: -3px;
+	right: -3px;
+}
+
+
+
 .green {
 	background: rgb(164,179,87);
 	background: -moz-linear-gradient(top, rgba(164,179,87,1) 0%, rgba(117,137,12,1) 100%);

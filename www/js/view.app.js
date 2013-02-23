@@ -9,7 +9,8 @@
       el: $("#app"),
       events: {
         "click #btnAddTask": "addTask",
-        "click #openDialog": "toggleDialog"
+        "click #openDialog": "toggleDialog",
+        "click #btnClose": "hideDialog"
       },
       initialize: function() {
         console.log("--view app--");
@@ -65,7 +66,6 @@
         console.log("--view app - complete");
       },
       toggleDialog: function() {
-        console.log(this.dialogFlg);
         if (this.dialogFlg === 0) {
           this.dialogFlg = 1;
           $("#dialog").css('display', 'block');
@@ -80,6 +80,15 @@
             $("#dialog").css('display', 'none');
           });
         }
+      },
+      hideDialog: function() {
+        console.log("clicked");
+        this.dialogFlg = 0;
+        $("#dialog").animate({
+          opacity: 0
+        }, 500, "swing", function() {
+          return $("#dialog").css('display', 'none');
+        });
       }
     });
     return AppView;

@@ -23,7 +23,8 @@ define [
                 #"click #clear-completed": "clearCompleted"
                 #"click #toggle-all": "toggleAllComplete"
                 "click #btnAddTask" : "addTask"
-                "click #openDialog": "toggleDialog"
+                "click #openDialog" : "toggleDialog"
+                "click #btnClose" : "hideDialog"
 
             #
             initialize : ->
@@ -122,7 +123,6 @@ define [
             #     )
 
             toggleDialog : () ->
-                console.log(@dialogFlg)
                 if @dialogFlg == 0
                     @dialogFlg = 1
                     $("#dialog").css('display','block')
@@ -143,6 +143,18 @@ define [
                             $("#dialog").css('display','none')
                             return
                     )
+                return
+            hideDialog : () ->
+                console.log "clicked"
+                @dialogFlg = 0
+                $("#dialog").animate({
+                    opacity:0
+                    },
+                    500,
+                    "swing",
+                    ->
+                        $("#dialog").css('display','none')
+                )
                 return
 
         }
